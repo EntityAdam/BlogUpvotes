@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <button id="upvote">Upvote</button>
+</body>
+</html>
+<script language="javascript">
+    window.onload() {
+        var upvoteButton = document.getElementById('upvote');
+        if (upvoteButton != null) {
+            upvoteButton.addEventListener('click', upvote(), { 'pageUri': '?current page?' })
+        }
+    }
+    async function upvote(pageUri) {
+        var endpoint = 'https://functions.uri/api/upvote'
+        var response = await fetch(endpoint, {
+            method: 'POST'
+            headers: {
+                'Content-Type': 'application/json'
+                //'Function-Key': 'value'
+            }
+            body.
+        })
+
+    }
+</script>

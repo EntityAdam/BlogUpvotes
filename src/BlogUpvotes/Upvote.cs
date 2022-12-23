@@ -41,6 +41,9 @@ namespace BlogUpvotes
             dynamic data = JsonConvert.DeserializeObject(requestBody);
             pageUri = pageUri ?? data?.page;
 
+            //TODO Strip the page URI of any query string
+
+
             var clientIpsCollectionLink = UriFactory.CreateDocumentCollectionUri("blogUpvotes", "upvotes");
             var query = upVotesClient.CreateDocumentQuery<UpvoteItem>(clientIpsCollectionLink, new SqlQuerySpec()
             {
